@@ -1,0 +1,111 @@
+.header{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    padding: 10%;
+
+    .bg_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .topContent{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .logo{
+            cursor: pointer;
+            transition: all .4s;
+            &:hover{
+                transform: rotateY(-180deg);
+            }
+        }
+        .menuList{
+            display: flex;
+            align-items: center;
+            
+            li{
+                margin-right: 40px;
+                font-size: 20px;
+                transition: all .5s;
+                padding:10px 0px;
+                border-bottom: 2px solid transparent;
+                cursor: pointer;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                &:hover{
+                    border-color: white;
+                }
+            }
+        }
+    }
+    
+    .leftContent{
+        max-width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+
+        h1{ 
+            font-size: 60px;
+            margin-bottom: 30px;
+            text-align: start;
+            cursor: pointer;
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-align: start;
+            cursor: pointer;
+        }
+
+        .whatsAppBtn{
+            color: black;
+            background-color: white;
+            font-size: 28px;
+            transition: all .5s;
+            padding: 15px 30px 15px 70px;
+            position: relative;
+            border-radius: 20px;
+    
+            &::before{
+                content: '';
+                transition: all .5s;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                background: url('../../assets/header/whatsApp_logo.png') no-repeat center;
+                background-size: cover;
+                top: 15px;
+                left: 30px;
+            }
+            .number{
+                position: absolute;
+                color: transparent;
+                margin-left: 20px;
+                transition: all .5s;
+            }
+            &:hover{
+                background-color: rgb(189, 189, 189);
+                .number{
+                    position: relative;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    
+}
